@@ -1,0 +1,29 @@
+extends style
+
+block content
+
+    .bgadmin
+        .boxbg
+        .boxedit
+            h3 Add products
+            form(action="/addpro" method="post")
+                .form-group
+                    p Mã sp
+                    input#masp.form-control(type="text", name="masp", required='') 
+                .form-group
+                    p img sp
+                    input#img_p.form-control(type="text", name="imgsp", required='')
+                .form-group
+                    p Title sp
+                    input#titlesp.form-control(type="text", name="titlesp", required='')
+                .form-group
+                    p Price sp
+                    input#pricesp.form-control(type="text", name="pricesp", required='')
+                .form-group
+                    p Size sp
+                    input#sizesp.form-control(type="text", name="sizesp", required='')
+                .form-group
+                    p Mô tả sp
+                    input#mota.form-control(type="text", name="mota", required='')
+                button.btn.btn-sm.btn-primary(type="submit") Post
+

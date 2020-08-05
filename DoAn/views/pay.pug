@@ -1,0 +1,53 @@
+extends layout
+
+block content
+    .pay
+        .bgpay
+            h3 Thông tin khách hàng
+        .pay-content
+            .form-group
+                span Họ Tên
+                input#username.form-control(type="text", name="username", required='') 
+            .form-group
+                span Email
+                input#fullname.form-control(type="text", name="fullname", required='')
+            .form-group
+                span Số điện thoại
+                input#password.form-control(type="password", name="password", required='')
+            
+            .form-group
+                span Thanh toán
+                label(for='exampleFormControlSelect1') 
+                select#exampleFormControlSelect1.form-control
+                    option Gửi đơn hàng và thanh toán sau
+                    option Chuyển khoản và nhận hàng
+            .form-group
+                span adress
+                input#adress.form-control(type="text", name="adress", required='')
+            a(href="/").btn.btn-sm.btn-primary Send
+
+                //- .form-group
+                //-     span Họ Tên
+                //-     input.form-control(type="text" name="username" required='') 
+                //- .form-group
+                //-     .pay-email
+                //-         span Email
+                //-         input.form-control(type="email" name="email" required='')
+                //- .form-group
+                //-     span Số điện thoại 
+                //-     input.form-control(type="text" name="phone" required='') 
+                //- .form-group
+                //-     span Thanh toán
+                //-     label(for='exampleFormControlSelect1') 
+                //-     select#exampleFormControlSelect1.form-control
+                //-         option Gửi đơn hàng và thanh toán sau
+                //-         option Chuyển khoản và nhận hàng
+                //- .form-group
+                //-     span Địa chỉ
+                //-     input.form-control(type="text" name="adress" required='') 
+
+                //- .form-group
+                //-     label(for='exampleFormControlTextarea1') Ghi chú
+                //-     textarea#exampleFormControlTextarea1.form-control(rows='3')
+                //- button.btn.btn-sm.btn-primary(type="submit") Send
+

@@ -1,0 +1,21 @@
+// ----------set chiiều dài cho image và slider----------
+.carousel-inner, .carousel-item img
+{
+    height: 550px;
+}
+//----------- tiêu đề của slider---------------------------
+.carousel-caption
+{
+    font-family: 'Leckerli One', cursive;
+    h2 
+    {
+        color: yellow;
+        font-size: 3rem;
+    }
+    p 
+    {
+        color: orangered;
+        font-size: 25px;
+        font-weight: 500;
+    }
+}

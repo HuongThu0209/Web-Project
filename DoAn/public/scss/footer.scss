@@ -1,0 +1,70 @@
+footer
+{
+    background-image: url(/images/bg/bg-home.jpg);
+    background-position: center;
+    background-size: cover;
+    border: 1px solid rgb(47, 179, 255);
+    margin-top: 30px;
+    border-radius: 5px;
+    .footer_title 
+    {
+        text-align: center;
+        font-weight: 500;
+        color: #49a5fc;
+        font-size: 2.5em;
+        font-family: 'Leckerli One', cursive;
+        text-shadow: 5px 5px 2px #e2dae1;
+        
+    }
+}
+    
+.commitment, .hotline, .contact
+{
+    border-right: 1px solid white;
+    margin-top: 15px;
+    h3 
+    {
+        font-family: 'Leckerli One', cursive;
+        text-align: center;
+        color: white;
+    }
+    p 
+    {
+        margin-left: 10px;
+        color: white;
+        font-weight: 500;
+        font-size: 20px;
+    }
+}
+.contact
+{
+    .icon
+    {
+        text-align: center;
+        font-size: 2em;
+        color: rgb(59, 147, 247);
+        cursor: pointer;
+        margin-top: 15px;
+        i 
+        {
+            margin: 10px;
+        }
+        &:hover
+        {
+            color: #5e61ff;
+            transition: 0.5s;
+        }
+        p 
+        {
+            color: white;
+        }
+    }
+}
+@media only screen and (max-width: 768px)
+{
+    .commitment, .hotline
+    {
+        border-bottom: 1px solid rgb(81, 171, 245);
+    }
+}
+

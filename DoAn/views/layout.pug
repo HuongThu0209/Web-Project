@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1')
+    link(rel="shortcut icon", href="/images/favisionIcon.png", type="image/png")
+    //-link(rel='stylesheet', href="/swiperCdn/swiper.min.css")
+    link(rel='stylesheet', href="/css/content.css")
+    link(rel='stylesheet', href='/css/index.css')
+    link(rel="stylesheet", href="/css/header.css")
+    link(rel="stylesheet", href="/css/footer.css")
+    link(rel="stylesheet", href="/css/login.css")
+    link(rel="stylesheet", href="/css/register.css")
+    link(rel="stylesheet", href="/css/carousel.css")
+    link(rel="stylesheet", href="/css/lienhe.css")
+    link(rel="stylesheet", href="/css/tintuc.css")
+    link(rel="stylesheet", href="/css/products.css")
+    link(rel="stylesheet", href="/css/news.css")
+    link(rel="stylesheet", href="/css/banner1.css")
+    link(rel="stylesheet", href="/css/homeuser.css")
+    link(rel="stylesheet", href="/css/pay.css")
+
+    link(rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css')
+    link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css")
+    link(href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Hind&family=Leckerli+One&family=Pacifico&family=Permanent+Marker&family=Tangerine:wght@700&display=swap" rel="stylesheet")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Bonbon&family=Hind&family=Pacifico&family=Permanent+Marker&display=swap")
+    link(href="https://fonts.googleapis.com/css2?family=Galada&family=Hind&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet")
+    script(src="https://code.jquery.com/jquery-3.4.1.js")
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+    script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
+    script(src='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js')
+    script(type='text/javascript' src="/js/modal.js")
+    script(type='text/javascript' src="/js/product.js")
+  body
+    include includes/header
+    
+    block content
+    script(src='https://unpkg.com/aos@next/dist/aos.js')
+    script.
+      AOS.init();

@@ -1,0 +1,30 @@
+.boxedit
+{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    margin: 0 auto;
+    background: linear-gradient(60deg,#98e6d9,#d5bce9,#c7e990);
+    form
+    {
+        width: 90%;
+        margin: 0 auto;
+        .form-group
+        {
+            p 
+            {
+                float: left;
+                color: rgb(238, 25, 107);
+                font-size: 1.5em;
+                margin: 0;
+            }
+        }
+        button
+        {
+            margin-bottom: 1em;
+        }
+    }
+}

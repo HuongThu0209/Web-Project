@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/add-product.scss"
+    ],
+    "names": [],
+    "file": "add-product.css"
+}

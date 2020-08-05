@@ -1,0 +1,25 @@
+.register
+    .registerBox
+        .image
+            img(src="/images/bg/logo.jpg", alt="")
+        h2 Register Here
+        form(method="post" action="/registerform")
+            .form-text    
+                .registerLeft
+                    p Name
+                    input(type="text", name="username" )
+                    p Full Name
+                    input(type="text", name="fullname" )
+                    p Email
+                    input(type= "email", name="email")
+                    
+                .registerRight
+                    p Password
+                    input(type="password", name="password")
+                    p Confirm Password
+                    input(type="password", name="confirm-password")
+                    p Adress
+                    input(type="text", name="adress")
+            .send-box    
+                input(type="submit", value="Register")
+            

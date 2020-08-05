@@ -1,0 +1,44 @@
+// .carouselBx
+// {
+//     max-width: 1110px;
+//     margin: 0 auto;
+    
+// }
+.wavy
+{
+    position: relative;
+    margin: 20px ;
+    -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
+    span 
+    {
+        position: relative;
+        display: inline-block;
+        text-shadow: 5px 5px #ede9ee;
+        color: rgb(24, 131, 253);
+        font-size: 2.5em;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        font-family: 'Galada', cursive;
+        animation: animate 1s ease-in-out infinite;
+        animation-delay: calc(0.1s * var(--i));
+    }
+}
+//--------chuyển động wavy----------------
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(0px);
+    }
+    20%
+    {
+        transform: translateY(-20px);
+    }
+    40%,100%
+    {
+        transform: translateY(0px);
+    }
+}
+
+
+// ----------------- wavy text------------

@@ -1,0 +1,87 @@
+//----------menu---------------------------
+.header-area
+    //------------- Links---------------
+    nav.navbar.navbar-expand-lg.navbar-light
+        a.navbar-brand(href='/') 
+            img(src="/images/bg/logo1.png" style = "width: 60px;" alt="")
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse.main-menu-item
+            ul.navbar-nav.mr-auto
+                li.nav-item
+                    a.nav-link(href='/')
+                        | Trang chủ
+                li.nav-item.dropdown
+                    a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                        | Áo bóng đá
+                    .dropdown-menu(aria-labelledby='navbarDropdown')
+                        a.dropdown-item(href='/ManchesterUnited') Manchester United
+                        a.dropdown-item(href='/LiverPool') Liverpool
+                        a.dropdown-item(href='/AoVietNam') Việt Nam
+                        a.dropdown-item(href='/AoThaiLan') Áo Thái Lan
+                li.nav-item.dropdown
+                    a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                        | Giày bóng đá
+                    .dropdown-menu(aria-labelledby='navbarDropdown')
+                        a.dropdown-item(href='/GiayNikes') Nike
+                        a.dropdown-item(href='/GiayAdidas') Adidas
+                        a.dropdown-item(href='/GiayTheThao') Giày Thể Thao
+                li.nav-item.dropdown
+                    a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                        | Bộ Môn Khác
+                    .dropdown-menu(aria-labelledby='navbarDropdown')
+                        a.dropdown-item(href='/CauLong') Cầu Lông
+                        a.dropdown-item(href='/Tennis') Tennis
+                        a.dropdown-item(href='/Yoga') Yoga
+                li.nav-item
+                    a.nav-link(href='/new') Tin Tức
+                li.nav-item
+                    a.nav-link(href='/contact') Liên Hệ
+            form.form-inline.my-2.my-lg-0
+                input.form-control.mr-sm-2(type='search' placeholder='Search' aria-label='Search')
+                button.btn.btn-primary.my-2.my-sm-0(type='submit') Search
+
+        //-============menu 2=========================
+.container-fluid
+    .row
+        .one.col-12.col-sm-6.col-md-4.col-lg-3
+            span Time : từ 8.00 am - 22h pm Thứ Hai - Chủ Nhật
+        .two.col-12.col-sm-6.col-md-4.col-lg-3
+            span Hotline : 0989324999
+        .three.col-12.col-sm-6.col-md-4.col-lg-3
+            a(href="/login"  rel="noopener noreferrer") Đăng Nhập 
+            a(href="/register"  rel="noopener noreferrer") Đăng Kí
+            block links
+                
+        //-------------giỏ hàng-------------------------------
+        .four.col-12.col-sm-6.col-md-4.col-lg-3
+            button#cart(type='button' data-toggle='modal' data-target='#myModal')
+                i.fas.fa-cart-plus(aria-hidden='true')
+                    |  Giỏ hàng               
+            #myModal.modal.fade
+                .modal-dialog.modal-lg
+                    .modal-content
+                        .modal-header
+                            h4.modal-title Giỏ hàng
+                            button.close(type='button' data-dismiss='modal') &times;
+                        .modal-body
+                            .cart-row
+                                span.cart-item.cart-header.cart-column Sản Phẩm
+                                span.cart-price.cart-header.cart-column Giá
+                                span.cart-quantity.cart-header.cart-column Số Lượng
+                            div.cart-items
+                                //- .cart-row
+                                //-     .cart-item.cart-column
+                                //-         img.cart-item-image(src='' width='100' height='100')
+                                //-         span.cart-item-title uchiha
+                                //-     span.cart-price.cart-column 25000
+                                //-     .cart-quantity.cart-column
+                                //-         input.cart-quantity-input(type='number' value='1')
+                                //-         button.btn.btn-danger(type='button') xoa     
+                            .cart-total
+                                strong.cart-total-title Tổng Cộng:
+                                span.cart-total-price 0VNĐ
+                        .modal-footer
+                            button.btn.btn-closed(type='button' data-dismiss='modal') Đóng 
+                            a(href="/pay").btn.btn-primary Thanh Toán 
+

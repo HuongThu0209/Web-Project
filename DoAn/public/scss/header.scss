@@ -1,0 +1,253 @@
+//-------------header---------------
+// ------------------menu--------------------
+
+.header-area
+{
+    background: linear-gradient(120deg,#d2f8f3,#fff,#b2e7fc ,#fff,#fff,#73d8ff,#fff );
+    position: sticky;
+    top: 0px;
+    z-index: 1071;
+    margin-top: 15px;
+    box-shadow: 5px 5px 10px 5px rgba(206, 211, 233, 0.5);
+    .navbar-brand
+    {
+        margin-left: 50px;
+        margin-top: -20px;
+        height: 50px;
+    }
+    .navbar li 
+    {
+        margin-left: 24px;
+    }
+    .navbar li a 
+    {
+        font-family: 'Leckerli One', cursive;
+    }
+    li.nav-item
+    {
+        a 
+        {
+            font-family: 'Leckerli One', cursive;
+        }
+        a.nav-link 
+        {
+            color: rgb(63, 153, 238);
+            font-size: 23px;
+            text-shadow: 5px 4px 2px #febbff;
+            &:hover
+            {
+                color: #51dd00;
+                transition: 0.5s;
+            }
+        }
+        .dropdown-menu
+        {
+            margin-top: 6px;
+            
+        }
+        a.dropdown-item:hover 
+        {
+            background-color: rgba(206, 211, 233, 0.5);
+        }
+    }
+    .btn-primary
+    {
+        background-color: #00c8ff;
+        border: none;
+        &:hover
+        {
+            background-color: #a4dd00;
+            transition: 0.5s;
+        }
+    }
+}
+
+.container-fluid
+{
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-bottom: 1px solid rgba(206, 211, 233, 0.5);
+    .row 
+    {
+        text-align: center;
+        font-size: 18px;
+        padding-top: 5px;
+        .one, .two
+        {
+            span 
+            {
+                color: rgb(35, 120, 247);
+            }
+        }
+        .three
+        {
+            a 
+            {
+                font-size: 18px;
+                color: rgb(35, 120, 247);
+                margin-left: 15px;
+                font-weight: 500;
+                &:hover
+                {
+                    color: #00dd63;
+                    transition: 0.5s;
+                }
+            }
+        }
+        .four
+        {
+            #cart
+            {
+                font-size: 20px;
+                color: rgb(35, 120, 247);
+                cursor: pointer;
+                border: none;
+                background: none;
+                
+                &:hover
+                {
+                    color: #00dd63;
+                    transition: 0.5s;
+                    
+                }
+            }
+            
+        }
+    }
+}
+//================== layout giỏ hàng================
+.four
+{
+    .modal
+    {
+        margin-top: 60px;
+        height: 600px;
+        //-------------nội dung giỏ hàng-------------
+        .modal-content
+        {
+            //------------haeder giỏ hàng-------------
+            .modal-header
+            {
+                h4.modal-title 
+                {
+                    font-family: 'Leckerli One', cursive;
+                    color: blueviolet;
+                    font-weight: 500;
+                    font-size: 2em;
+                }
+                .close
+                {
+                    color: rgb(132, 6, 250);
+                    font-size: 2em;
+                    font-weight: 800;
+                    outline: none;
+                    cursor: pointer;
+                    &:hover
+                    {
+                        color: #f163e6; 
+                    }
+                }
+            }
+            //---------------body giỏ hàng--------------
+            .modal-body
+            {
+                .cart-row
+                {
+                    display: flex;
+                }
+                .cart-item
+                {
+                    width: 45%;
+                }
+                .cart-price
+                {
+                    width: 20%;
+                    font-size: 1.2em;
+                    color: rgb(49, 116, 240);
+                }
+                .cart-quantity
+                {
+                    width: 35%;
+                }
+                .cart-header
+                {
+                    color: rgb(195, 0, 255);
+                    font-weight: 500;
+                    font-size: 1.2em;
+                }
+                .cart-column
+                {
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid lightslategray;
+                    margin-right: 1.5em;
+                    margin-top: 10px;
+                }
+                .cart-item-image
+                {
+                    width: 80px;
+                    height: auto;
+                }
+                .cart-item-title
+                {
+                    color: green;
+                    font-size: 1.2em;
+                    margin-left: 20px ;
+                }
+                .cart-quantity-input
+                {
+                    height: 35px;
+                    width: 50px;
+                    border-radius: 5px;
+                    border: 1px solid blueviolet;
+                    padding: 0;
+                    text-align: center;
+                    font-size: 1.2em;
+                    margin-right: 25px;
+                    outline: none;
+                }
+                .cart-row:last-child {
+                    border-bottom: 1px solid blueviolet;
+                }
+                .cart-row:last-child .cart-column {
+                border: none;
+                }
+                .cart-total {
+                text-align: end;
+                margin-top: 10px;
+                margin-right: 10px;
+                }
+                .cart-total-title
+                {
+                    font-size: 1.5em;
+                    font-weight: 600;
+                    color: blueviolet;
+                    margin-right: 20px;
+                }
+                .cart-total-price
+                {
+                    font-size: 1.2em;
+                    color: rgb(49, 116, 240);
+                }
+            }
+            .modal-footer
+            {
+                .btn
+                {
+                    margin-right: 40px;
+                }
+                .btn.btn-closed
+                {
+                    background-color: #bd39f7;
+                    border: none;
+                    &:hover
+                    {
+                        background-color: #f163e6;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+

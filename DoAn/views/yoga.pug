@@ -1,0 +1,28 @@
+extends layout
+
+mixin display(yoGa)
+    each item in yoGa
+        .main-product.col-12.col-sm-6.col-md-4.col-lg-3(data-aos='flip-up' data-aos-easing="ease-out-cubic" data-aos-duration="1000")
+            .box-product
+                .img-product
+                    img.img-prd(data-toggle='tooltip' data-placement='right' title=item.mota)(src=item.imgsp) 
+                .content-product
+                    h5.title-product=item.titlesp
+                    .content-product-details
+                        .price
+                            span.money=item.pricesp
+                        button.btn.btn-cart(type='button') Add to cart
+            
+
+block content
+    .image-prd
+        h2 Chào mừng bạn đến với bộ sưu tập Yoga
+    //-------------- nội dung ------------------
+    .Products
+        
+        .row
+            +display(yoGa)
+    
+    //--------------- footer -----------------------
+    include includes/footer
+    

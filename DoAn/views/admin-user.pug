@@ -1,0 +1,205 @@
+extends style
+
+mixin display(adUser)
+    each item in adUser
+        tbody
+            tr
+                th(scope='row')
+                    a(href="")=item.ID
+                td=item.username
+                td=item.fullname
+                td=item.password
+                td=item.email
+                td=item.adress
+                td
+                    a.btn.btn-sm.btn-primary(href="/edit/" +item.ID) Edit
+                    a.btn.btn-sm.btn-danger(href="/delete/" +item.ID onclick="return confirm('Bạn chắc chắn muốn xóa')") Delete
+
+block content
+    //- .container-fluid
+    //-     .bg-admin
+    //-         h1 Welcom to Admin
+    //-     .row
+    //-         .sidebar-admin.col-2 
+    //-             .logo-admin.col-12
+    //-                 img(src="/images/bg/logo1.png", alt="")
+    //-             hr
+    //-             .menu-admin
+    //-                 nav
+    //-                     ul 
+    //-                         li
+    //-                             a(href="/admin-page") Quản lí sản phẩm
+    //-                         li
+    //-                             a(href="/admin-user") Quản lí người dùng
+    //-                         li
+    //-                             a(href="") Quản lí đơn hàng
+
+    //-         .content-admin.col-10 
+    //-             a.btn.btn-sm.btn-primary(href="/add-user") Add User
+    //-             .sptable
+                    
+                    
+    //-                 table.table.table-dark.table-striped
+    //-                     thead
+    //-                         tr
+    //-                             th(scope='col') ID
+    //-                             th(scope='col') User Name 
+    //-                             th(scope='col') Full Name
+    //-                             th(scope='col') Password
+    //-                             th(scope='col') Email 
+    //-                             th(scope='col') Adress 
+    //-                             th(scope='col') Action
+    //-                     +display(adUser)
+
+
+
+        //- doctype html
+        //- html
+        //-     head
+        //-         title= title
+        //-         link(rel="stylesheet" href="/css/theme.css")
+        //-         link(rel="stylesheet" href="/bootstrap-4.1/bootstrap.min.css")
+        //-         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css")
+        //-         link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+
+    .page-wrapper
+        // HEADER MOBILE
+        header.header-mobile.d-block.d-lg-none
+            .header-mobile__bar
+                .container-fluid
+                    .header-mobile-inner
+                        a.logo(href='/admin-page')
+                            img(src='images/bg/logo1.png' alt='CoolAdmin')
+                        button.hamburger.hamburger--slider(type='button')
+                            span.hamburger-box
+                                span.hamburger-inner
+            nav.navbar-mobile
+                .container-fluid
+                    ul.navbar-mobile__list.list-unstyled
+                        li.has-sub
+                            a.js-arrow(href='/admin-page')
+                                i.fas.fa-tachometer-alt
+                                | Trang ch&#x1EE7;
+                            
+                        li
+                            a(href='/adminPro')
+                                i.fa.fa-plus-square(aria-hidden='true')
+                                | Qu&#x1EA3;n l&iacute; s&#x1EA3;n ph&#x1EA9;m
+                        li
+                            a(href='/adminUser')
+                                i.fa.fa-users(aria-hidden='true')
+                                | Qu&#x1EA3;n l&iacute; users
+                        li
+                            a(href='/order')
+                                i.far.fa-check-square
+                                | Qu&#x1EA3;n l&iacute; &dstrok;&#x1A1;n h&agrave;ng
+                        li.has-sub
+                            a.js-arrow(href='/adminpage')
+                                i.fas.fa-copy
+                                | Pages
+                            ul.navbar-mobile-sub__list.list-unstyled.js-sub-list
+                                li
+                                    a(href='login.html') Login
+                                li
+                                    a(href='register.html') Register
+                                li
+                                    a(href='forget-pass.html') Forget Password
+        //- END HEADER MOBILE
+        //- MENU SIDEBAR
+        aside.menu-sidebar.d-none.d-lg-block
+            .logo
+                a(href='#')
+                    img(src='images/bg/logo1.png' style='width: 70px' alt='Welcom Admin')
+                    |  Welcom Admin
+            .menu-sidebar__content.js-scrollbar1
+                nav.navbar-sidebar
+                    ul.list-unstyled.navbar__list
+                        li.has-sub
+                            a.js-arrow(href='/admin-page')
+                                i.fas.fa-tachometer-alt
+                                | Trang ch&#x1EE7;
+                            
+                        li
+                            a(href='/adminPro')
+                                i.fa.fa-plus-square(aria-hidden='true')
+                                | Qu&#x1EA3;n l&iacute; s&#x1EA3;n ph&#x1EA9;m
+                        li.active
+                            a(href='/adminUser')
+                                i.fa.fa-users(aria-hidden='true')
+                                | Qu&#x1EA3;n l&iacute; users
+                        li
+                            a(href='/order')
+                                i.far.fa-check-square
+                                | Qu&#x1EA3;n l&iacute; &dstrok;&#x1A1;n h&agrave;ng
+                        li.has-sub
+                            a.js-arrow(href='/adminpage')
+                                i.fas.fa-copy
+                                | Pages
+                            ul.list-unstyled.navbar__sub-list.js-sub-list
+                                li
+                                    a(href='login.html') Login
+                                li
+                                    a(href='register.html') Register
+                                li
+                                    a(href='forget-pass.html') Forget Password
+        
+        .page-container
+            //- HEADER DESKTOP
+            header.header-desktop
+                .section__content.section__content--p30
+                    .container-fluid
+                        .header-wrap
+                            form.form-header(action='' method='POST')
+                                input.au-input.au-input--xl(type='text' name='search' placeholder='Search ...')
+                                button.au-btn--submit(type='submit')
+                                    i.fa.fa-search(aria-hidden='true')
+                            .header-button
+                                .noti-wrap
+                                    .noti__item.js-item-menu
+                                        i.fas.fa-comment-alt
+                                        span.quantity 1
+                                        
+                                    .noti__item.js-item-menu
+                                        i.fas.fa-envelope
+                                        span.quantity 1
+                                        
+                                    .noti__item.js-item-menu
+                                        i.fa.fa-bell(aria-hidden='true')
+                                        span.quantity 3
+                                        
+                                .account-wrap
+                                    .account-item.clearfix.js-item-menu
+                                        .image
+                                            img(src='images/avatar.jpg' alt='John Doe')
+                                        .content
+                                            p Sport Play
+                                    
+            //- END HEADER DESKTOP
+            //- MAIN CONTENT
+            .main-content
+                .content-admin.col-10 
+                    a.btn.btn-sm.btn-primary(href="/add-user") Add User
+                    .sptable
+                        table.table.table-dark.table-striped
+                            thead
+                                tr
+                                    th(scope='col') ID
+                                    th(scope='col') User Name 
+                                    th(scope='col') Full Name
+                                    th(scope='col') Password
+                                    th(scope='col') Email 
+                                    th(scope='col') Adress 
+                                    th(scope='col') Action
+                            +display(adUser)
+
+    //- Jquery JS
+    script(src='vendor/jquery-3.2.1.min.js')
+    //- Bootstrap JS
+
+    script(src="/bootstrap-4.1/popper.min.js")
+    script(src="/js/Chart.bundle.min.js")
+    script(src="/js/main.js")
+    script(src="/js/moment.js")
+    //- Main JS
+    script(src='js/main.js')
+    //- end document

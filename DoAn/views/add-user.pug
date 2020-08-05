@@ -1,0 +1,26 @@
+extends style
+
+block content
+
+    .bgadmin
+        .boxbg
+        .boxedit
+            h3 Add users
+            form(action="/add" method="post")
+                .form-group
+                    p username
+                    input#username.form-control(type="text", name="username", required='') 
+                .form-group
+                    p fullname
+                    input#fullname.form-control(type="text", name="fullname", required='')
+                .form-group
+                    p password
+                    input#password.form-control(type="password", name="password", required='')
+                .form-group
+                    p email
+                    input#email.form-control(type="email", name="email", required='')
+                .form-group
+                    p adress
+                    input#adress.form-control(type="text", name="adress", required='')
+                button.btn.btn-sm.btn-primary(type="submit") Send
+

@@ -1,0 +1,26 @@
+extends style
+
+block content
+
+    .bgadmin
+        .boxbg
+        .boxedit
+            form(action="/edit" method="post")
+                input(type="hidden" name="id" value="item.ID")
+                .form-group
+                    p username
+                    input#username.form-control(type="text" name="username" value=''  required='') 
+                .form-group
+                    p fullname
+                    input#fullname.form-control(type="text" name="fullname" value=''  required='')
+                .form-group
+                    p password
+                    input#password.form-control(type="password" name="password" value="" required='')
+                .form-group
+                    p email
+                    input#email.form-control(type="email" name="email" value="" required='')
+                .form-group
+                    p adress
+                    input#adress.form-control(type="text" name="adress" value="" required='')
+                button.btn.btn-sm.btn-primary(type="submit") Update
+

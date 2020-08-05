@@ -1,0 +1,168 @@
+extends style
+
+mixin display(adProduct)
+    each item in adProduct
+        tbody
+            tr
+                th(scope='row')
+                    a(href="")=item.ID
+                td
+                    a(href="")=item.masp
+                td
+                    a(href="")=item.imgsp
+                td
+                    a(href="")=item.titlesp
+                td
+                    a(href="")=item.pricesp
+                td
+                    a(href="")=item.sizesp
+                td
+                    a(href="")=item.mota
+                td
+                    a.btn.btn-sm.btn-primary(href="/edit/" +item.ID) Edit
+                    a.btn.btn-sm.btn-danger(href="/deletepro/" +item.ID onclick="return confirm('Bạn chắc chắn muốn xóa')" ) Delete
+
+
+block content
+    .page-wrapper
+        //- HEADER MOBILE
+        header.header-mobile.d-block.d-lg-none
+            .header-mobile__bar
+                .container-fluid
+                    .header-mobile-inner
+                        a.logo(href='index.html')
+                            img(src='images/bg/logo1.png' alt='CoolAdmin')
+                        button.hamburger.hamburger--slider(type='button')
+                            span.hamburger-box
+                                span.hamburger-inner
+            nav.navbar-mobile
+                .container-fluid
+                    ul.navbar-mobile__list.list-unstyled
+                        li.has-sub
+                            a.js-arrow(href='/admin-page')
+                                i.fas.fa-tachometer-alt
+                                | Trang ch&#x1EE7;
+                        li
+                            a(href='/adminPro')
+                                i.fa.fa-plus-square(aria-hidden='true')
+                                | Qu&#x1EA3;n l&iacute; s&#x1EA3;n ph&#x1EA9;m
+                        li
+                            a(href='/adminUser')
+                                i.fa.fa-users(aria-hidden='true')
+                                | Qu&#x1EA3;n l&iacute; users
+                        li
+                            a(href='/order')
+                                i.far.fa-check-square
+                                | Qu&#x1EA3;n l&iacute; &dstrok;&#x1A1;n h&agrave;ng
+                        li.has-sub
+                            a.js-arrow(href='/adminpage')
+                                i.fas.fa-copy
+                                | Pages
+                            ul.navbar-mobile-sub__list.list-unstyled.js-sub-list
+                                li
+                                    a(href='login.html') Login
+                                li
+                                    a(href='register.html') Register
+                                li
+                                    a(href='forget-pass.html') Forget Password
+        //- END HEADER MOBILE
+        //- MENU SIDEBAR
+        aside.menu-sidebar.d-none.d-lg-block
+            .logo
+                a(href='#')
+                    img(src='images/bg/logo1.png' style='height:70px;' alt='Cool Admin')
+                    |  Welcom Admin
+            .menu-sidebar__content.js-scrollbar1
+                nav.navbar-sidebar
+                    ul.list-unstyled.navbar__list
+                        li.has-sub
+                            a.js-arrow(href='/admin-page')
+                                i.fas.fa-tachometer-alt
+                                | Trang ch&#x1EE7;
+                        li.active
+                            a(href='/adminPro')
+                                i.fa.fa-plus-square(aria-hidden='true')
+                                | Qu&#x1EA3;n l&iacute; s&#x1EA3;n ph&#x1EA9;m
+                        li
+                            a(href='/adminUser')
+                                i.fa.fa-users(aria-hidden='true')
+                                | Qu&#x1EA3;n l&iacute; user
+                        li
+                            a(href='/order')
+                                i.far.fa-check-square
+                                | Qu&#x1EA3;n l&iacute; &dstrok;&#x1A1;n h&agrave;ng
+                        li.has-sub
+                            a.js-arrow(href='/adminpage')
+                                i.fas.fa-copy
+                                | Pages
+                            ul.list-unstyled.navbar__sub-list.js-sub-list
+                                li
+                                    a(href='login.html') Login
+                                li
+                                    a(href='register.html') Register
+                                li
+                                    a(href='forget-pass.html') Forget Password
+        //- END MENU SIDEBAR
+        //- PAGE CONTAINER
+        .page-container
+            //- HEADER DESKTOP
+            header.header-desktop
+                .section__content.section__content--p30
+                    .container-fluid
+                        .header-wrap
+                            form.form-header(action='' method='POST')
+                                input.au-input.au-input--xl(type='text' name='search' placeholder='Search ...')
+                                button.au-btn--submit(type='submit')
+                                    i.fa.fa-search(aria-hidden='true')
+                            .header-button
+                                .noti-wrap
+                                    .noti__item.js-item-menu
+                                        i.fas.fa-comment-alt
+                                        span.quantity 1
+                                        
+                                    .noti__item.js-item-menu
+                                        i.fas.fa-envelope
+                                        span.quantity 1
+                                        
+                                    .noti__item.js-item-menu
+                                        i.fa.fa-bell(aria-hidden='true')
+                                        span.quantity 3
+                                        
+                                .account-wrap
+                                    .account-item.clearfix.js-item-menu
+                                        .image
+                                            img(src='images/avatar.jpg' alt='John Doe')
+                                        .content
+                                            p Sport Play
+                                            
+            //- END HEADER DESKTOP
+            //- MAIN CONTENT
+            .main-content
+                .content-admin.col-10 
+                    a.btn.btn-sm.btn-primary(href="/add-pr") Add Product
+                    .sptable
+                        table.table.table-dark.table-striped
+                            thead
+                                tr
+                                    th(scope='col') ID
+                                    th(scope='col') MaSP 
+                                    th(scope='col') ImgSP
+                                    th(scope='col') Title
+                                    th(scope='col') Price 
+                                    th(scope='col') Size 
+                                    th(scope='col') Mota
+                                    th(scope='col') Action
+                            +display(adProduct)
+
+        //- END MAIN CONTENT
+        //- END PAGE CONTAINER
+    //- Jquery JS
+    script(src='vendor/jquery-3.2.1.min.js')
+    //- Bootstrap JS
+
+    script(src="/bootstrap-4.1/popper.min.js")
+    script(src="/js/Chart.bundle.min.js")
+    script(src="/js/main.js")
+    script(src="/js/moment.js")
+    //- Main JS
+    script(src='js/main.js')

@@ -1,0 +1,36 @@
+extends layout
+block content
+
+    //-======================content================
+    .contain
+        .Bxcontact
+            .bx
+                p Liên Hệ Với 
+                    i Sport Play
+            .bx
+                p Thông Tin của 
+                    i Sport Play
+            .row
+                .dc.col-12.col-sm-6.col-lg-6
+                    b Địa Chỉ:
+                    p Sport Play - 90 Hàm Nghi, Nam Từ Liêm, Hà Nội
+                .dt.col-12.col-sm-6.col-lg-6
+                    b Điện Thoại: 
+                    p 0989324999
+                //-----========= thông tin cá nhân------------------
+        .Bxinfo
+            h6 Thông Tin Của Bạn
+            p Họ và Tên:
+            input(type="text", name="")
+            p E-Mail:
+            input(type="email", name="")
+            p Số Điện Thoại:
+            input(type="text", name="")
+            .bxtext 
+                p Nội Dung:
+                input(type="text", name="")
+                a(href="/").btn.btn-primary(type='submit') Send
+
+
+    //--==================footer==================
+    include includes/footer

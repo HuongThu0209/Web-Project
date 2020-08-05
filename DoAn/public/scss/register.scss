@@ -1,0 +1,96 @@
+.register
+{
+    margin: 0;
+    padding: 0;
+    // width: 100vw;
+    // height: 100vh;
+    // background-image: url(/images/bg/bglogin.jpg);
+    // background-size: cover;
+    .registerBox
+    {
+        position: absolute;
+        top: 64%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 700px;
+        height: 430px;
+        padding: 70px 40px;
+        box-sizing: border-box;
+        background: linear-gradient(110deg, #31aab9, #ffffff,#4fc3f7,#97ff00,#ffffff,#fda1ff);
+        .image
+        {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: calc(-100px/2) ;
+            left: calc(50% - 50px);
+            img 
+            {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: 1px solid rgb(230, 87, 206);
+            }
+        }
+        h2 
+        {
+            margin: 0;
+            text-align: center;
+            padding: 0;
+            color: white;
+            font-family: 'Leckerli One', cursive;
+        }
+    }
+}
+form 
+{
+    display: grid;
+    grid-template-rows: 1fr 50px;
+    grid-auto-flow: row;
+    grid-gap: 10px;
+    .form-text
+    {
+        background-color: blueviolet;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: column;
+        margin: 0;
+        .registerLeft,.registerRight
+        {
+            background-color: gray;
+            padding: 0 20px 20px 20px;
+        }
+        
+        p 
+        {
+            color: white;
+            font-family: 'Leckerli One', cursive;
+            margin: 10px 10px 5px 10px ;
+            font-size: 18px;
+        }
+        input 
+        {
+            width: 100%;
+            
+        }
+    }
+    .send-box
+    {
+        text-align: center;
+        padding: 10px;
+        input[type="submit"]
+        {
+            background-color: rgb(70, 124, 241);
+            font-size: 20px;
+            outline: none;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            &:hover
+            {
+                background: linear-gradient(120deg,#04b4d3,#b3b6b8,#f136f7);
+                transition: 0.5s;
+            }
+        }
+    }
+}

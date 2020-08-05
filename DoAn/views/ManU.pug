@@ -1,0 +1,43 @@
+extends layout
+
+mixin display(manchesterUnited)
+    each item in manchesterUnited
+        .main-product.col-12.col-sm-6.col-md-4.col-lg-3(data-aos="fade-up" data-aos-duration="900")
+            .box-product
+                .img-product(data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600")
+                    img.img-prd(data-toggle='tooltip' data-placement='right' title=item.mota)(src=item.imgsp) 
+                .content-product
+                    h5.title-product=item.titlesp
+                    .content-product-details
+                        .status 
+                            b Size : 
+                                span.si=item.sizesp
+                        .price
+                            span.money=item.pricesp
+                        button.btn.btn-cart(type='button') Add to cart
+            
+
+block content
+    .image-prd
+        h2 Chào mừng bạn đến với áo bóng đá câu lạc bộ Manchester United
+    //-------------- nội dung ------------------
+    .Products
+        
+        .row
+            +display(manchesterUnited)
+            
+            //- .main-product.col-12.col-sm-6.col-md-4.col-lg-3
+            //-     .box-product
+            //-         .img-product
+            //-             img.img-prd(src="", alt="")
+            //-         .content-product
+            //-             h5.title-product giay-the-thao-nữ-HQ
+            //-             .content-product-details
+            //-                 .price
+            //-                     span.money 1200000 đ
+            //-                 button.btn.btn-cart(type='button') Buy
+            
+            
+    //--------------- footer -----------------------
+    include includes/footer
+    

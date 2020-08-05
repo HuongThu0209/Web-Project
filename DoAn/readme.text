@@ -1,0 +1,19 @@
+COLOR
+    containner
+        background-color: rgba(234, 224, 243, 0.2);
+    button-cart 
+        background-color: #bd39f7;
+        hover : background-color: #f163e6;
+    price 
+        color: rgb(49, 116, 240);
+
+font-family: 'Leckerli One', cursive;
+
+
+h2 : title danh mục trong trang chủ
+    color: #00c8ff;
+h3 : title trong footer
+    color: rgb(158, 13, 158);
+h4 : modal-title 
+h5 : title chi tiết sản phẩm
+h6 : danh muc chi tiet sp
